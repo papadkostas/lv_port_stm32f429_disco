@@ -123,8 +123,9 @@ void monitor_cb(lv_disp_drv_t * d, uint32_t t, uint32_t p)
 void tft_init(void)
 {
 	static lv_color_t disp_buf1[TFT_HOR_RES * 40];
+	static lv_color_t disp_buf2[TFT_HOR_RES * 40];
 	static lv_disp_buf_t buf;
-	lv_disp_buf_init(&buf, disp_buf1, NULL, TFT_HOR_RES * 40);
+	lv_disp_buf_init(&buf, disp_buf1, disp_buf2, TFT_HOR_RES * 40);
 
 	lv_disp_drv_init(&disp_drv);
 

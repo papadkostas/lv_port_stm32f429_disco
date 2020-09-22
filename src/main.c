@@ -17,7 +17,7 @@
 #include "hal_stm_lvgl/tft/tft.h"
 #include "hal_stm_lvgl/touchpad/touchpad.h"
 
-#include "lv_examples/lv_examples.h"
+#include "gauge.h"
 
 
 static void SystemClock_Config(void);
@@ -43,7 +43,7 @@ int main(void)
 	tft_init();
 	touchpad_init();
 
-	lv_demo_widgets();
+	lv_ex_get_started_guage();
 
 	while (1)
 	{
